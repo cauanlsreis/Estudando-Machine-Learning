@@ -21,8 +21,8 @@ from sklearn.model_selection import train_test_split #Importa train_test_split p
 xTrain, xTest, yTrain, yTest = train_test_split(x,y, test_size=0.2) #Divide x e y em conjuntos de treino e teste, com 20% dos dados reservados para teste.
 
 print('Computando Normalização...')
-from sklearn.preprocessing import StandardScaler
-scaleX = StandardScaler()
-xTrain = scaleX.fit_transform(xTrain)
-xTest = scaleX.fit_transform(xTest)
+from sklearn.preprocessing import StandardScaler # O StandardScaler é usado para padronizar os recursos
+scaleX = StandardScaler() # cria uma instância de StandardScaler chamada scaleX
+xTrain = scaleX.fit_transform(xTrain) # Ajuste e transformação dos dados de treino
+xTest = scaleX.fit_transform(xTest) # Transformação dos dados de teste
 print(xTrain)
